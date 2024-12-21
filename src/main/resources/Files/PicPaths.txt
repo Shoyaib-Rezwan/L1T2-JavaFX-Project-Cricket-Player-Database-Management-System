@@ -1,0 +1,26 @@
+IPL,/Images/IplLogo.png
+Royal Challengers Bangalore,/Images/Royal Challengers Bangalore.jpeg
+Punjab Kings,/Images/Punjab Kings.jpeg
+Kolkata Knight Riders,/Images/Kolkata Knight Riders.jpeg
+Mumbai Indians,/Images/Mumbai Indians.jpeg
+Sunrisers Hyderabad,/Images/Sunrisers Hyderabad.jpeg
+Lucknow Super Giants,/Images/Lucknow Super Giants.jpeg
+Delhi Capitals,/Images/Delhi Capitals.jpeg
+Rajasthan Royals,/Images/Rajasthan Royals.jpeg
+Gujarat Titans,/Images/Gujarat Titans.jpeg
+Chennai Super Kings,/Images/Chennai Super Kings.jpeg
+MS Dhoni,/Images/MS Dhoni.jpeg
+David Warner,/Images/David Warner.jpeg
+Jos Buttler,/Images/Jos Buttler.jpeg
+Kane Williamson,/Images/Kane Williamson.jpeg
+Mustafizur Rahman,/Images/Mustafizur Rahman.jpeg
+Quinton de Kock,/Images/Quinton de Kock.jpeg
+Rashid Khan,/Images/Rashid Khan.jpeg
+Rohit Sharma,/Images/Rohit Sharma.jpeg
+Virat Kohli,/Images/Virat Kohli.jpeg
+Glenn Maxwell,/Images/Glenn Maxwell.jpeg
+KL Rahul,/Images/KL Rahul.jpeg
+Pat Cummins,/Images/Pat Cummins.jpeg
+Litton Das,/Images/Litton Das.jpeg
+Ravindra Jadeja,/Images/Ravindra Jadeja.jpeg
+General,/Images/Face.jpg

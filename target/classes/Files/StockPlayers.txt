@@ -1,0 +1,3 @@
+Ruturaj Gaikwad,India,27,1.78,None,Batsman,31,15000000,16500000
+Sam Curran,England,26,1.75,None,Allrounder,58,20000000,15000000
+Ravindra Jadeja,India,35,1.73,None,Allrounder,8,16500000,165000000

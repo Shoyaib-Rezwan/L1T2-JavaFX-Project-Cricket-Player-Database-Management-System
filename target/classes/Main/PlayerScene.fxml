@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="206.0" prefWidth="475.0" style="-fx-background-color: BLACK; -fx-opacity: 90%; -fx-border-radius: 10px;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.PlayerSceneController">
+   <children>
+      <Text fx:id="ClubTitle" fill="#ffffcc" layoutX="7.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Club:" AnchorPane.leftAnchor="7.0">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="RED" layoutX="7.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age:">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="ClubNameText" fill="#ffffcc" layoutX="66.0" layoutY="59.1865234375" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" AnchorPane.leftAnchor="66.0" AnchorPane.topAnchor="43.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="AgeText" fill="RED" layoutX="50.0" layoutY="134.1865234375" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="118.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="#ffecbe" layoutX="8.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Height:" AnchorPane.leftAnchor="7.0">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="HeightText" fill="#ffecbe" layoutX="67.0" layoutY="161.1865234375" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" AnchorPane.leftAnchor="67.0" AnchorPane.topAnchor="145.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="#2fe0ff" layoutX="7.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country:" AnchorPane.leftAnchor="7.0">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="CountryText" fill="#2fe0ff" layoutX="83.0" layoutY="83.1865234375" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" AnchorPane.leftAnchor="83.0" AnchorPane.topAnchor="67.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="#88ff8a" layoutX="8.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Position:" AnchorPane.leftAnchor="7.0">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="PositionText" fill="#88ff8a" layoutX="79.0" layoutY="111.1865234375" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" AnchorPane.leftAnchor="79.0" AnchorPane.topAnchor="95.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fill="#f4abff" layoutX="9.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Weekly Salary:" wrappingWidth="117.40625" AnchorPane.leftAnchor="7.0">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="SalaryText" fill="#f4abff" layoutX="121.0" layoutY="188.1865234375" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" AnchorPane.leftAnchor="121.0" AnchorPane.topAnchor="172.0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="NameText" fill="YELLOW" layoutX="3.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="467.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="SaleButton" layoutX="7.0" layoutY="7.0" mnemonicParsing="false" onAction="#saleButtonClicked" style="-fx-background-color: #dbcace;" text="Sale" textFill="#1673c9" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="7.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="345.0" layoutY="78.0" mnemonicParsing="false" onAction="#viewImageButtonClicked" style="-fx-background-color: #f7f5ed;" text="View Image" textFill="#105e0c">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Line endX="100.0" layoutX="256.0" layoutY="103.0" rotate="90.0" stroke="#fcfcfc" strokeWidth="5.0" />
+      <Text fill="#fbff90" layoutX="354.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jersey no. ">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="JerseyText" fill="#fbff90" layoutX="373.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Button fx:id="BuyButton" layoutX="424.0" layoutY="8.0" mnemonicParsing="false" onAction="#buyButtonClicked" style="-fx-background-color: #dbcace;" text="Buy" textFill="#1673c9" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
