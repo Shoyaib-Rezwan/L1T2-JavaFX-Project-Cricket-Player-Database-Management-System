@@ -27,9 +27,11 @@ public class LoginWindowController {
     @FXML
     public Button ResetButton;
     public ImageView IPLLogoImageView;
+    public ImageView IntroImageView;
     Main main;
     Club club;
     String picPath;
+    String introPath;
 
     public void setMain(Main main) {
         this.main = main;
@@ -38,7 +40,10 @@ public class LoginWindowController {
     public void init(String[] clubNames) {
         InitClubNames(clubNames);
         picPath = main.getPath("IPL");
+        introPath = main.getPath("Intro");
         IPLLogoImageView.setImage(new Image(getClass().getResourceAsStream(picPath)));
+        IntroImageView.setImage(new Image(getClass().getResourceAsStream(introPath)));
+        IntroImageView.setPreserveRatio(true);
     }
 
     @FXML

@@ -24,3 +24,4 @@ Pat Cummins,/Images/Pat Cummins.jpeg
 Litton Das,/Images/Litton Das.jpeg
 Ravindra Jadeja,/Images/Ravindra Jadeja.jpeg
 General,/Images/Face.jpg
+Intro,/Images/Intro.png
