@@ -3,6 +3,7 @@ package Main;
 import Database.*;
 import NetworkUtil.*;
 import Sever.MainServer;
+import SideWindows.CustomAlerts;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.SocketException;
 import java.util.*;
 //import java.net.Socket;
 
@@ -23,7 +25,12 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        socketWrapper = new SocketWrapper("localhost", 22222);
+        try {
+            socketWrapper = new SocketWrapper("localhost", 22222);
+        } catch (IOException e) {
+            new CustomAlerts("Connection Error", "Server not found!!!!!").getAlert().showAndWait();
+            return;
+        }
         loadPlayers();
         loadPicPaths();
         this.stage = primaryStage;
@@ -81,14 +88,22 @@ public class Main extends Application {
     }
 
     public boolean checkLoginInfo(String club, String password) throws Exception {
-        socketWrapper.write(new LoginRequest(club, password));
-        Object obj = socketWrapper.read();
         boolean loginStatus = false;
-        if (obj instanceof LoginStatus) {
-            LoginStatus temp = (LoginStatus) obj;
-            loginStatus = temp.getLoginStatus();
+        try {
+            socketWrapper.write(new LoginRequest(club, password));
+            Object obj = socketWrapper.read();
+
+            if (obj instanceof LoginStatus) {
+                LoginStatus temp = (LoginStatus) obj;
+                loginStatus = temp.getLoginStatus();
+            }
+            return loginStatus;
+        } catch (SocketException e) {
+            stage.close();
+            new CustomAlerts("Connection Error", "Server not found!!!!!").getAlert().showAndWait();
+            System.exit(-1);
         }
-        return loginStatus;
+        return false;
     }
 
     public String[] getClubNames() throws Exception {
@@ -113,26 +128,56 @@ public class Main extends Application {
     }
 
     public void loadPlayers() throws Exception {
-        socketWrapper.write(new LoadPlayerRequest());
-        players = null;
-        players = (PlayerList) socketWrapper.read();
+        try {
+            socketWrapper.write(new LoadPlayerRequest());
+            players = null;
+            players = (PlayerList) socketWrapper.read();
+        } catch (SocketException e) {
+            stage.close();
+            new CustomAlerts("Connection Error", "Server not found!!!!!").getAlert().showAndWait();
+            System.exit(-1);
+        }
     }
 
     public void loadStockPlayers() throws Exception {
-        socketWrapper.write(new LoadStockRequest());
-        stockPlayers = (PlayerList) socketWrapper.read();
+        try {
+            socketWrapper.write(new LoadStockRequest());
+            stockPlayers = (PlayerList) socketWrapper.read();
+        } catch (SocketException e) {
+            stage.close();
+            new CustomAlerts("Connection Error", "Server not found!!!!!").getAlert().showAndWait();
+            System.exit(-1);
+        }
     }
 
     public void addPlayer(Player x) throws Exception {
-        socketWrapper.write(new AddPlayerRequest(x));
+        try {
+            socketWrapper.write(new AddPlayerRequest(x));
+        } catch (SocketException e) {
+            stage.close();
+            new CustomAlerts("Connection Error", "Server not found!!!!!").getAlert().showAndWait();
+            System.exit(-1);
+        }
     }
 
     public void sellPlayer(Player x) throws IOException {
-        socketWrapper.write(new SellPlayerRequest(x));
+        try {
+            socketWrapper.write(new SellPlayerRequest(x));
+        } catch (SocketException e) {
+            stage.close();
+            new CustomAlerts("Connection Error", "Server not found!!!!!").getAlert().showAndWait();
+            System.exit(-1);
+        }
     }
 
     public void buyPlayer(Player x) throws Exception {
-        socketWrapper.write(new BuyPlayerRequest(x));
+        try {
+            socketWrapper.write(new BuyPlayerRequest(x));
+        } catch (SocketException e) {
+            stage.close();
+            new CustomAlerts("Connection Error", "Server not found!!!!!").getAlert().showAndWait();
+            System.exit(-1);
+        }
     }
 
     //a private method for loading the playerList
@@ -141,9 +186,15 @@ public class Main extends Application {
     }
 
     public void loadPicPaths() throws Exception {
-        socketWrapper.write(new PicPathsRequest());
-        PicPathSendToClient temp = (PicPathSendToClient) socketWrapper.read();
-        this.map = temp.getMap();
+        try {
+            socketWrapper.write(new PicPathsRequest());
+            PicPathSendToClient temp = (PicPathSendToClient) socketWrapper.read();
+            this.map = temp.getMap();
+        } catch (SocketException e) {
+            stage.close();
+            new CustomAlerts("Connection Error", "Server not found!!!!!").getAlert().showAndWait();
+            System.exit(-1);
+        }
     }
 
     public String getPath(String name) {
@@ -154,6 +205,12 @@ public class Main extends Application {
     }
 
     public void changePassword(String clubName, String newPassword) throws Exception {
-        socketWrapper.write(new ChangePasswordRequest(clubName, newPassword));
+        try {
+            socketWrapper.write(new ChangePasswordRequest(clubName, newPassword));
+        } catch (SocketException e) {
+            stage.close();
+            new CustomAlerts("Connection Error", "Server not found!!!!!").getAlert().showAndWait();
+            System.exit(-1);
+        }
     }
 }

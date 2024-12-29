@@ -46,3 +46,5 @@ Marcus Stoinis,Australia,35,1.85,Lucknow Super Giants,Allrounder,17,17500000,0
 Mitchell Marsh,Australia,33,1.91,Delhi Capitals,Allrounder,31,18000000,0
 Jasprit Bumrah,India,30,1.78,Mumbai Indians,Bowler,93,17500000,0
 Rakib,Bangladesh,25,1.65,Mumbai Indians,Batsman,,1000000,0
+Shoyaib,Bangladesh,50,1.65,Rajasthan Royals,Allrounder,,1500,0
+sRgrw,afeqafcaegqf,567452,1.65,Rajasthan Royals,dgefgeagt,,5368532,0
